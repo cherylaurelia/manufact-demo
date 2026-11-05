@@ -60,7 +60,7 @@ export default function Home() {
 
       <section className="mt-10">
         <h2 className="text-lg font-semibold">Compare, called from inside the view</h2>
-        <Image className="mt-3 h-auto w-full rounded-lg border border-[var(--line)]" src="/inspector-compare-crop.jpg" width={738} height={405} loading="eager" alt="Comparison table inside the view: AgentMail, Cooper Email and Primitive Email, section by section, with Discoverability 67, 58 and 17." />
+        <Image className="mt-3 h-auto w-full rounded-lg border border-[var(--line)]" src="/inspector-compare-crop.jpg" width={738} height={420} loading="eager" alt="Comparison table inside the view: AgentMail, Cooper Email and Primitive Email, section by section, with Discoverability 67, 58 and 17." />
         <p className="mt-2 text-sm text-[var(--muted)]">Tick servers, press Compare, and the view calls a second tool. Clicked in the hosted Inspector against the deployed server. This is the part worth copying.</p>
         <pre className="mt-3 overflow-x-auto rounded-lg bg-[var(--alt)] p-4 text-sm"><code>{viewCode}</code></pre>
       </section>
