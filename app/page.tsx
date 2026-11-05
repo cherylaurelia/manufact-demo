@@ -70,13 +70,13 @@ export default function Home() {
         <p className="mt-2 text-sm text-[var(--muted)]">Connected to the deployed server and no other, one run each. The first prompt doesn&apos;t name the tools; it found them because they were the only ones connected.</p>
         <blockquote className="mt-3 rounded-lg border border-[var(--line)] p-4 text-sm">
           <p className="font-medium">&ldquo;I want my agent to have its own email inbox. Which MCP server should I connect?&rdquo;</p>
-          <p className="mt-3">&ldquo;I&apos;d connect AgentMail &hellip; It also has the highest score of the four main options, though the lead over Cooper Email is too small to decide on alone.&rdquo;</p>
+          <p className="mt-3">&ldquo;I&apos;d connect AgentMail &hellip; It also has the top score on Manufact&apos;s leaderboard, though its lead over Cooper Email is small.&rdquo;</p>
         </blockquote>
         <blockquote className="mt-3 rounded-lg border border-[var(--line)] p-4 text-sm">
           <p className="font-medium">&ldquo;Which MCP server should I connect for Postgres? Use the which-mcp tools.&rdquo;</p>
-          <p className="mt-3">&ldquo;The leaderboard has no server mainly about Postgres, and no general one for connecting to any Postgres database, including self-hosted.&rdquo;</p>
+          <p className="mt-3">&ldquo;The leaderboard has no general-purpose Postgres server, and all three matches are tied to a specific vendor&apos;s platform.&rdquo;</p>
         </blockquote>
-        <p className="mt-2 text-sm text-[var(--muted)]">Excerpts. Postgres is the weak case: the word only appears in tool names on Neon, PlanetScale and ClickHouse. The agent tried &ldquo;sql&rdquo; on its own and found Supabase too, and made a suggestion from there.</p>
+        <p className="mt-2 text-sm text-[var(--muted)]">Excerpts. Postgres is the weak case: the word only appears in tool names on Neon, PlanetScale and ClickHouse. Supabase shows up only if the agent also searches another word, which it did in an earlier run (&ldquo;sql&rdquo;) and not in this one.</p>
       </section>
 
       <section className="mt-10">
