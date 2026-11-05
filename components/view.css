@@ -1,0 +1,28 @@
+.wm { --ink:#09090b; --muted:#71717a; --line:#09090b1f; --surface:#fff; --alt:#f7f6f8; --warn:#92400e;
+  font: 14px/1.45 Inter, ui-sans-serif, system-ui, sans-serif; color: var(--ink); background: var(--surface); padding: 14px; }
+.dark .wm { --ink:#fafafa; --muted:#a1a1aa; --line:#ffffff24; --surface:#18181b; --alt:#27272a; --warn:#fbbf24; }
+.wm-head { display:flex; justify-content:space-between; gap:12px; align-items:baseline; margin-bottom:10px; }
+.wm-title { font-weight:600; font-size:15px; }
+.wm-tag { font-size:11px; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:1px 8px; white-space:nowrap; }
+.wm-row { display:grid; grid-template-columns:auto 44px 1fr auto; gap:10px; align-items:start; padding:10px 0; border-top:1px solid var(--line); }
+.wm-score { font:600 18px/1.2 ui-monospace, Menlo, monospace; text-align:right; }
+.wm-score small { display:block; font:400 10px/1.2 Inter, system-ui, sans-serif; color:var(--muted); }
+.wm-name { font-weight:600; }
+.wm-desc { color:var(--muted); font-size:13px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.wm-meta { color:var(--muted); font-size:12px; margin-top:2px; }
+.wm-old { color:var(--warn); }
+.wm-link { background:none; border:0; padding:0; color:inherit; font:inherit; font-size:12px; text-decoration:underline; cursor:pointer; white-space:nowrap; }
+.wm-btn { background:var(--ink); color:var(--surface); border:0; border-radius:6px; padding:7px 12px; font:inherit; font-weight:500; cursor:pointer; white-space:nowrap; }
+.wm-btn:disabled { opacity:.45; cursor:default; }
+.wm-foot { display:flex; justify-content:space-between; gap:12px; align-items:center; border-top:1px solid var(--line); padding-top:10px; }
+.wm-note { color:var(--muted); font-size:12px; margin-top:8px; }
+.wm-table-wrap { overflow-x:auto; }
+.wm-table { border-collapse:collapse; width:100%; font-size:13px; }
+.wm-table th, .wm-table td { padding:7px 8px; text-align:right; border-top:1px solid var(--line); white-space:nowrap; }
+.wm-table th:first-child, .wm-table td:first-child { text-align:left; color:var(--muted); font-weight:400; }
+.wm-table thead th { border-top:0; font-weight:600; }
+.wm-table td { font-family:ui-monospace, Menlo, monospace; }
+.wm-table td:first-child { font-family:inherit; }
+.wm-table .wm-low { color:var(--warn); font-weight:600; }
+.wm-error { color:var(--warn); }
+.wm-group { font-size:12px; font-weight:600; color:var(--muted); padding:12px 0 6px; border-top:1px solid var(--line); }

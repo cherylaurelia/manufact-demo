@@ -1,0 +1,4 @@
+# Deploys include data/reports.json, which .gitignore keeps out of the repo.
+.git
+node_modules
+.next
