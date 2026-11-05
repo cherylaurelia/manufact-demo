@@ -31,7 +31,7 @@ const Results = ({ result }: { readonly result: SearchResult }) => {
   return (
     <div>
       {result.mainMatches === 0 && (
-        <p className="wm-note wm-old">No server is mainly about this. These only mention it, so check them before connecting one.</p>
+        <p className="wm-note wm-old">This keyword search found nothing mainly about this, which doesn&apos;t mean the leaderboard has nothing. These only mention it.</p>
       )}
       {result.servers.map((server) => (
         <div key={server.slug}>

@@ -7,7 +7,7 @@ An MCP App built with [mcp-use](https://github.com/mcp-use/mcp-use) that finds a
 **Why:** Manufact's [scoring post](https://manufact.com/blog/how-to-measure-mcp-server-quality) says a public score lets developers inspect a server before connecting it. Their own MCP's public [tool list](https://manufact.com/leaderboard/mcp-manufact-com) has no tool that reads the leaderboard (checked 2026-11-05). No user has asked for this.
 
 ## What it does
-- `find-servers`: keyword search over name, description and tool names, in Manufact's score order, with a React view. Each row says what matched and when it was reviewed.
+- `find-servers`: keyword search over name, description and tool names, with name and opening-word matches first, then Manufact's score order, with a React view. Each row says what matched and when it was reviewed.
 - `compare-servers`: 2 to 4 servers, section by section. Also called from inside the results view with `useCallTool`.
 
 ## Run it

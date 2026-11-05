@@ -24,7 +24,7 @@ const hard = [
 
 const limits = [
   "The views have run in your Inspector and its chat, not inside ChatGPT or Claude, because I didn't add a connector to a personal account for this. Claude Code shows the text result.",
-  "The leaderboard has no public JSON API I could find, so this reads your public pages. If the list can't be read, the tool returns an error and no scores.",
+  "The leaderboard has no public JSON API I could find, so this reads your public pages, and search uses an index of 612 reports saved on 2026-11-05, so descriptions and tool names can go stale while scores and dates stay live. If the list can't be read, the tool returns an error and no scores.",
   "Search is keyword matching. Unscored servers match on name and URL only, and Postgres hosts whose text never says Postgres, like Supabase, won't appear for that word.",
   "Not on your scorer, because submitting publishes to your catalog. On Vercel, not Manufact Cloud, because I didn't connect a GitHub account for this demo.",
 ] as const;
@@ -66,17 +66,13 @@ export default function Home() {
       </section>
 
       <section className="mt-10">
-        <h2 className="text-lg font-semibold">Two answers from Claude Code</h2>
-        <p className="mt-2 text-sm text-[var(--muted)]">Connected to the deployed server and no other, one run each. The first prompt doesn&apos;t name the tools; it found them because they were the only ones connected.</p>
+        <h2 className="text-lg font-semibold">An answer from Claude Code</h2>
+        <p className="mt-2 text-sm text-[var(--muted)]">Connected to the deployed server and no other, one run. The prompt doesn&apos;t name the tools; it found them because they were the only ones connected.</p>
         <blockquote className="mt-3 rounded-lg border border-[var(--line)] p-4 text-sm">
           <p className="font-medium">&ldquo;I want my agent to have its own email inbox. Which MCP server should I connect?&rdquo;</p>
           <p className="mt-3">&ldquo;I&apos;d connect AgentMail &hellip; It also has the top score on Manufact&apos;s leaderboard, though its lead over Cooper Email is small.&rdquo;</p>
         </blockquote>
-        <blockquote className="mt-3 rounded-lg border border-[var(--line)] p-4 text-sm">
-          <p className="font-medium">&ldquo;Which MCP server should I connect for Postgres? Use the which-mcp tools.&rdquo;</p>
-          <p className="mt-3">&ldquo;The leaderboard has no general-purpose Postgres server, and all three matches are tied to a specific vendor&apos;s platform.&rdquo;</p>
-        </blockquote>
-        <p className="mt-2 text-sm text-[var(--muted)]">Excerpts. Postgres is the weak case: the word only appears in tool names on Neon, PlanetScale and ClickHouse. Supabase shows up only if the agent also searches another word, which it did in an earlier run (&ldquo;sql&rdquo;) and not in this one.</p>
+        <p className="mt-2 text-sm text-[var(--muted)]">Excerpt. Postgres is a weak case: the word only appears in tool names on Neon, PlanetScale and ClickHouse, and Supabase is on your leaderboard but doesn&apos;t come back for it. That&apos;s a limit of this keyword search, not of your catalog.</p>
       </section>
 
       <section className="mt-10">
